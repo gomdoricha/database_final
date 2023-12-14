@@ -1,0 +1,24 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/example?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password:
+  web:
+    resources:
+      static-locations: classpath:/productimgs/
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+# ??? ??? ??? ??? ? ??? ?? ??
+
+mybatis:
+  mapper-locations: mybatis/mapper/*.xml
+  type-aliases-package: com.example.termproject
+  configuration:
+    map-underscore-to-camel-case: true
